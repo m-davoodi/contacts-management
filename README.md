@@ -1,5 +1,8 @@
 # Getting Started with Create React App
 
+![CI/CD](https://github.com/m-davoodi/contacts-management/workflows/CI/CD/badge.svg)
+![License](https://img.shields.io/github/license/m-davoodi/contacts-management)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
