@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/contacts-management/static/css/main.073c9b0a.css",
-    "main.js": "/contacts-management/static/js/main.8eec752a.js",
-    "static/js/787.465af3c6.chunk.js": "/contacts-management/static/js/787.465af3c6.chunk.js",
+    "main.js": "/contacts-management/static/js/main.4c131943.js",
+    "static/js/988.00c0d258.chunk.js": "/contacts-management/static/js/988.00c0d258.chunk.js",
     "static/media/logo.svg": "/contacts-management/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
     "index.html": "/contacts-management/index.html",
     "main.073c9b0a.css.map": "/contacts-management/static/css/main.073c9b0a.css.map",
-    "main.8eec752a.js.map": "/contacts-management/static/js/main.8eec752a.js.map",
-    "787.465af3c6.chunk.js.map": "/contacts-management/static/js/787.465af3c6.chunk.js.map"
+    "main.4c131943.js.map": "/contacts-management/static/js/main.4c131943.js.map",
+    "988.00c0d258.chunk.js.map": "/contacts-management/static/js/988.00c0d258.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.073c9b0a.css",
-    "static/js/main.8eec752a.js"
+    "static/js/main.4c131943.js"
   ]
 }
