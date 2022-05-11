@@ -1,0 +1,1 @@
+{"version":3,"file":"static/js/dashboard.1d319578.chunk.js","mappings":"kMAEaA,EAA0B,WACrC,OAAO","sources":["pages/dashboard/DashboardPage.tsx"],"sourcesContent":["import * as React from 'react';\n\nexport const DashboardPage: React.FC = () => {\n  return <div>Dashboard Page</div>;\n};\n"],"names":["DashboardPage"],"sourceRoot":""}

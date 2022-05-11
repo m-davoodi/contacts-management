@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkcontacts_management=self.webpackChunkcontacts_management||[]).push([[966],{9937:function(n,e,t){t.r(e),t.d(e,{default:function(){return c}});t(9867);var a=t(2834),c=function(){return(0,a.jsx)("div",{children:"Dashboard Page"})}}}]);
+//# sourceMappingURL=dashboard.1d319578.chunk.js.map
