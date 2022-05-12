@@ -30,9 +30,8 @@ export const DrawerItem: React.FC<DrawerItemProps> = (props) => {
       selected={selected}
       onClick={handleClick}
       sx={{
-        borderRadius: theme.spacing(0, 3, 3, 0),
         '&.Mui-selected': {
-          backgroundColor: `${theme.palette.secondary.light} !important`,
+          backgroundColor: `${theme.palette.primary.light} !important`,
         },
       }}
     >
