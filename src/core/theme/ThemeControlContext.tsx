@@ -2,23 +2,11 @@ import { CssBaseline, PaletteMode, ThemeProvider, useMediaQuery } from '@mui/mat
 import * as React from 'react';
 import { dark, light } from './themes';
 
-interface ThemeControlContextType {
-  paletteMode: PaletteMode;
-}
 interface ThemeControlToggleContextType {
   togglePaletteMode: (paletteMode?: PaletteMode) => void;
 }
 
-const ThemeControlContext = React.createContext<ThemeControlContextType | null>(null);
 const ThemeControlContextToggle = React.createContext<ThemeControlToggleContextType | null>(null);
-
-export function usePaletteMode(): ThemeControlContextType {
-  const context = React.useContext(ThemeControlContext);
-  if (context === null) {
-    throw new Error('usePaletteMode must be used inside the <ThemeControlProvider/>');
-  }
-  return context;
-}
 
 export function useTogglePaletteMode(): ThemeControlToggleContextType {
   const context = React.useContext(ThemeControlContextToggle);
@@ -51,12 +39,10 @@ export const ThemeControlProvider: React.FC<ThemeControlProviderProps> = (props)
 
   return (
     <ThemeControlContextToggle.Provider value={{ togglePaletteMode }}>
-      <ThemeControlContext.Provider value={{ paletteMode }}>
-        <ThemeProvider theme={paletteMode === 'light' ? light : dark}>
-          <CssBaseline />
-          {props.children}
-        </ThemeProvider>
-      </ThemeControlContext.Provider>
+      <ThemeProvider theme={paletteMode === 'light' ? light : dark}>
+        <CssBaseline />
+        {props.children}
+      </ThemeProvider>
     </ThemeControlContextToggle.Provider>
   );
 };

@@ -1,5 +1,4 @@
-import { responsiveFontSizes, Theme, createTheme as createMuiTheme, PaletteMode, Breakpoint } from '@mui/material';
-import { red } from '@mui/material/colors';
+import { Breakpoint, createTheme as createMuiTheme, PaletteMode, responsiveFontSizes, Theme } from '@mui/material';
 
 declare module '@mui/material/styles' {
   interface Theme {
@@ -37,36 +36,30 @@ function createTheme(mode: PaletteMode): Theme {
         ? {
             mode: 'light',
             primary: {
-              main: '#FFF',
+              main: '#8bc34a',
+              light: '#a2cf6e',
+              dark: '#618833',
             },
             secondary: {
-              main: '#005288',
-              light: '#A7A9AC',
-            },
-            error: {
-              main: red.A400,
+              main: '#009688',
+              light: '#52c7b8',
+              dark: '#00675b',
             },
             background: {
-              default: '#FFF',
+              default: '#f8f8f8',
             },
           }
         : {
             mode: 'dark',
             primary: {
-              main: '#0F1112',
+              main: '#263238',
+              light: '#4f5b62',
+              dark: '#000a12',
             },
             secondary: {
-              main: '#005288',
-            },
-            error: {
-              main: red.A400,
-            },
-            background: {
-              default: '#0F1112',
-            },
-            text: {
-              primary: '#E8EAED',
-              secondary: '#FFFFFFDE',
+              main: '#212121',
+              light: '#484848',
+              dark: '#000000',
             },
           },
 

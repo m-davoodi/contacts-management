@@ -1,22 +1,14 @@
-import { Box, Container, styled } from '@mui/material';
+import { Box, styled } from '@mui/material';
 import { shouldForwardProp } from '@mui/system';
 import * as React from 'react';
-import { QueryClient, QueryClientProvider } from 'react-query';
 import { Outlet } from 'react-router-dom';
 import { ErrorBoundary } from 'src/shared/error-boundary';
 import { useMobileDetector } from 'src/shared/hooks';
+import { LoadingOverlay } from 'src/shared/overlay';
+import { ReactQueryProvider } from '../react-query';
 import { useDrawer } from './app-drawer';
 
 export const ContentArea: React.FC = () => {
-  const queryClient = new QueryClient({
-    defaultOptions: {
-      queries: {
-        suspense: true,
-        useErrorBoundary: true,
-        refetchOnWindowFocus: false,
-      },
-    },
-  });
   const isMobile = useMobileDetector();
   const { isDrawerOpen } = useDrawer();
 
@@ -30,17 +22,15 @@ export const ContentArea: React.FC = () => {
         </div>
       }
     >
-      <Container maxWidth={false}>
-        <Box mt={8}>
-          <ContentWrapper isDrawerOpen={isDrawerOpen} isMobile={isMobile}>
-            <React.Suspense fallback={<div>Loading...</div>}>
-              <QueryClientProvider client={queryClient}>
-                <Outlet />
-              </QueryClientProvider>
-            </React.Suspense>
-          </ContentWrapper>
-        </Box>
-      </Container>
+      <Box mt={8}>
+        <ContentWrapper isDrawerOpen={isDrawerOpen} isMobile={isMobile}>
+          <React.Suspense fallback={<LoadingOverlay />}>
+            <ReactQueryProvider>
+              <Outlet />
+            </ReactQueryProvider>
+          </React.Suspense>
+        </ContentWrapper>
+      </Box>
     </ErrorBoundary>
   );
 };
@@ -58,7 +48,7 @@ const ContentWrapper = styled('div', {
       easing: theme.transitions.easing.sharp,
       duration: theme.transitions.duration.leavingScreen,
     }),
-    marginLeft: `calc(${theme.appDrawer.width}px - ${theme.spacing(3)})`,
+    marginLeft: theme.appDrawer.width,
   }),
   ...((isMobile || !isDrawerOpen) && {
     transition: theme.transitions.create('margin', {

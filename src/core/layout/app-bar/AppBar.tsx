@@ -6,20 +6,17 @@ import {
 import { AppBar as MuiAppBar, Box, IconButton, styled, Toolbar, useScrollTrigger, useTheme } from '@mui/material';
 import * as React from 'react';
 import logo from 'src/assets/logo.png';
-import { usePaletteMode, useTogglePaletteMode } from 'src/core/theme';
+import { useTogglePaletteMode } from 'src/core/theme';
 import { useToggleDrawer } from '../app-drawer';
 
 export const AppBar: React.FC = () => {
   const theme = useTheme();
   const { togglePaletteMode } = useTogglePaletteMode();
-  const { paletteMode } = usePaletteMode();
   const { toggleDrawer } = useToggleDrawer();
   const trigger = useScrollTrigger({
     disableHysteresis: true,
     threshold: 0,
   });
-
-  console.log(theme.palette.mode, 'mode');
 
   return (
     <Box flexGrow={1}>
@@ -60,7 +57,7 @@ export const AppBar: React.FC = () => {
                 togglePaletteMode();
               }}
             >
-              {paletteMode === 'dark' ? (
+              {theme.palette.mode === 'dark' ? (
                 <ToggleLightModeIcon htmlColor={theme.custom.palette.iconColor} />
               ) : (
                 <ToggleDarkModeIcon htmlColor={theme.custom.palette.iconColor} />

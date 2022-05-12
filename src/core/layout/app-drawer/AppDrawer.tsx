@@ -24,7 +24,6 @@ export const AppDrawer: React.FC = () => {
         width: theme.appDrawer.width,
         flexShrink: 0,
         '& .MuiDrawer-paper': {
-          background: theme.palette.background.default,
           width: theme.appDrawer.width,
           border: 0,
         },

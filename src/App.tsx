@@ -6,7 +6,7 @@ import { light, ThemeControlProvider } from 'src/core/theme';
 
 export const App: React.FC = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="contacts-management">
       <ThemeProvider theme={light}>
         <CssBaseline />
         <ThemeControlProvider>
