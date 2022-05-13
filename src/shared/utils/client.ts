@@ -1,21 +1,21 @@
 import qs from 'qs';
 import { BASE_URL } from 'src/core/constants';
 
-export type RequestConfig<P = {}> = RequestInit & { params?: P };
+export type RequestConfig<P = {}, B = {}> = RequestInit & { params?: P; jsonBody?: B };
 
-export function client(path: string, { body, params, ...customConfig }: RequestConfig = {}) {
+export function client(path: string, { jsonBody, params, ...customConfig }: RequestConfig = {}) {
   const headers = { 'content-type': 'application/json' };
 
   const config: RequestInit = {
-    method: body ? 'POST' : 'GET',
+    method: jsonBody ? 'POST' : 'GET',
     ...customConfig,
     headers: {
       ...headers,
       ...customConfig.headers,
     },
   };
-  if (body) {
-    config.body = JSON.stringify(body);
+  if (jsonBody) {
+    config.body = JSON.stringify(jsonBody);
   }
   let endpoint = `${BASE_URL}/${path}`;
   endpoint += params !== undefined ? `?${qs.stringify(params)}` : '';
