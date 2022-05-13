@@ -1,0 +1,10 @@
+.git
+*Dockerfile*
+*docker-compose*
+.dockerignore
+node_modules
+storybook-static
+build
+.env.local
+.env.development.local
+.env.production.local
