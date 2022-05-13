@@ -6,15 +6,17 @@ import { EmptyDataPlaceholder } from 'src/shared/placeholders';
 
 type Props = {
   tableInstance: TableInstance<UserDto>;
+  onClick: (user: UserDto) => void;
 };
 
 export const TableBodyRows: React.FC<Props> = (props) => {
   const {
     tableInstance: { rows, visibleColumns, prepareRow },
+    onClick,
   } = props;
 
   const handleRowClick = (user: UserDto) => {
-    console.log(user);
+    onClick(user);
   };
 
   if (!rows.length) {
