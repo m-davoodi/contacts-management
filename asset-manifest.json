@@ -1,11 +1,11 @@
 {
   "files": {
     "main.css": "/contacts-management/static/css/main.ff8efffd.css",
-    "main.js": "/contacts-management/static/js/main.26bd1c78.js",
+    "main.js": "/contacts-management/static/js/main.197b1432.js",
     "dashboard.js": "/contacts-management/static/js/dashboard.1d319578.chunk.js",
-    "contacts.js": "/contacts-management/static/js/contacts.8325736a.chunk.js",
+    "contacts.js": "/contacts-management/static/js/contacts.782c4e65.chunk.js",
     "static/js/988.40b6e139.chunk.js": "/contacts-management/static/js/988.40b6e139.chunk.js",
-    "static/js/612.748979af.chunk.js": "/contacts-management/static/js/612.748979af.chunk.js",
+    "static/js/636.4fa21a15.chunk.js": "/contacts-management/static/js/636.4fa21a15.chunk.js",
     "static/media/roboto-all-500-normal.woff": "/contacts-management/static/media/roboto-all-500-normal.52cb737b682eb9661ee1.woff",
     "static/media/roboto-all-700-normal.woff": "/contacts-management/static/media/roboto-all-700-normal.ef6d1d09b20b877fee4e.woff",
     "static/media/roboto-all-400-normal.woff": "/contacts-management/static/media/roboto-all-400-normal.376ea5d93f71583052f6.woff",
@@ -40,14 +40,14 @@
     "static/media/roboto-greek-ext-700-normal.woff2": "/contacts-management/static/media/roboto-greek-ext-700-normal.9674bc0ae12c2551d9d1.woff2",
     "index.html": "/contacts-management/index.html",
     "main.ff8efffd.css.map": "/contacts-management/static/css/main.ff8efffd.css.map",
-    "main.26bd1c78.js.map": "/contacts-management/static/js/main.26bd1c78.js.map",
+    "main.197b1432.js.map": "/contacts-management/static/js/main.197b1432.js.map",
     "dashboard.1d319578.chunk.js.map": "/contacts-management/static/js/dashboard.1d319578.chunk.js.map",
-    "contacts.8325736a.chunk.js.map": "/contacts-management/static/js/contacts.8325736a.chunk.js.map",
+    "contacts.782c4e65.chunk.js.map": "/contacts-management/static/js/contacts.782c4e65.chunk.js.map",
     "988.40b6e139.chunk.js.map": "/contacts-management/static/js/988.40b6e139.chunk.js.map",
-    "612.748979af.chunk.js.map": "/contacts-management/static/js/612.748979af.chunk.js.map"
+    "636.4fa21a15.chunk.js.map": "/contacts-management/static/js/636.4fa21a15.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.ff8efffd.css",
-    "static/js/main.26bd1c78.js"
+    "static/js/main.197b1432.js"
   ]
 }
